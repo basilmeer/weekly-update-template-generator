@@ -31,9 +31,9 @@
 require 'date'
 
 class UpdateGenerator
-  def initialize(date: Date.today, offset: 1)
+  def initialize(date)
     @date = date
-    @offset = offset # Monday: 1 for offset; for Tuesday use 2, etc.
+    @offset = 1 # Monday: 1 for offset; for Tuesday use 2, etc.
   end
 
   def call
@@ -78,4 +78,7 @@ class UpdateGenerator
   end
 end
 
-UpdateGenerator.new.call
+# Format should be Ruby compatible
+param = ARGV.any? ? Date.parse(ARGV.first) : Date.today
+
+UpdateGenerator.new(param).call

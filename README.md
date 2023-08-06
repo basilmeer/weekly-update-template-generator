@@ -34,10 +34,14 @@ I've purposely set the file creation to append instead of write 'cause it's easy
 
 Total Hours: X hours
 ```
-(lol or you can copy it from the above snippet)
+(or you can copy it from the above snippet)
 
 ## How to use
-Either `chmod +x path_to_the_script/update_generator.rb` or call `ruby path_to_the_script/update_generator.rb`
+- Either `chmod +x path_to_the_script/update_generator.rb`; or
+- Run `ruby path_to_the_script/update_generator.rb`
+
+By default, it uses the current day to figure out the week start and the week end. But you can pass a Ruby parseable format such as `dd/mm/yyy` as an arg for past or future dates.
+e.g. `update_generator.rb 31/07/2023` and it will give you template from 31st July to 4th July
 
 ## Requirements
 - Ruby (any version works)
