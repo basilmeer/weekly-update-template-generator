@@ -1,5 +1,4 @@
 # Weekly Update (Template) Generator
----
 
 Title's pretty self-explanatory. It's a simple script that let's you generate a template for a summarized weekly report for whatever reason you might need it for.
 I made this specifically so that I don't have to spend more time than necessary to insert the dates and ensure the format's alright every week.
